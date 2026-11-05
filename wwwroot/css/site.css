@@ -1,0 +1,370 @@
+@font-face {
+    font-family: "minimal";
+    src: url(/Recursos/minimal.otf);
+}
+
+::selection {
+    background: var(--color0);
+    color: var(--color4);
+}
+
+:root, [colgroup] {
+    --color0: #2C3E50;
+    --color1: #34495E;
+    --color2: #7F8C8D;
+    --color3: #BDC3C7;
+    --color4: #ECF0F1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "minimal";
+    letter-spacing: 1.5px;
+}
+
+body {
+    font-size: 20px;
+    background: var(--color4);
+    letter-spacing: 1.5px;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+    select::-ms-expand {
+        display: none;
+    }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.topnav {
+    background: var(--color1);
+    overflow: hidden;
+}
+
+    .topnav a {
+        float: left;
+        color: var(--color4);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 18px;
+        background: var(--color1);
+        height: 60px;
+        display: flex;
+        align-items: center;
+        transition: .4s;
+    }
+
+        .topnav a:hover {
+            color: black;
+            background: var(--color3);
+        }
+
+.cabezal {
+    margin-top: 100px;
+    text-align: center;
+    font-size: 50px;
+}
+
+/* Index */
+#qwerty {
+    width: 350px;
+    text-align: center;
+}
+
+#Logo {
+    height: 90px;
+}
+
+.Registro {
+    background-color: var(--color2);
+    width: 100%;
+    height: 438px;
+    text-align: center;
+    align-content: center;
+}
+
+    .Registro input {
+        height: 24px;
+        width: 220px;
+        font-size: 18px;
+        outline: none;
+    }
+
+    .Registro select {
+        height: 30px;
+        width: 80px;
+        font-size: 18px;
+        text-align: center;
+        outline: none;
+    }
+
+    .Registro button {
+        outline: none;
+        width: 140px;
+        height: 70px;
+        margin-top: 20px;
+        background: var(--color3);
+        color: var(--color1);
+        border: none;
+        border-radius: 10px;
+        transition: .3s;
+        font-size: 18px;
+    }
+
+        .Registro button:hover {
+            background: var(--color1);
+            color: var(--color4);
+            box-shadow: 0 10px 35px var(--color0);
+        }
+
+        .Registro button:active {
+            box-shadow: none;
+        }
+
+.Opciones {
+    background-color: var(--color3);
+    width: 100%;
+    height: 410px;
+    text-align: center;
+    align-content: center;
+}
+
+    .Opciones button {
+        outline: none;
+        width: 200px;
+        height: 160px;
+        margin-left: 5px;
+        margin-right: 5px;
+        background: var(--color3);
+        color: var(--color0);
+        border: none;
+        border-radius: 10px;
+        transition: .15s;
+        font-size: 24px;
+    }
+
+        .Opciones button:hover {
+            transform: scale(110%);
+            box-shadow: 0px 10px 25px 10px var(--color0);
+            background: var(--color4);
+        }
+
+        .Opciones button:active {
+            background: var(--color2);
+            transform: scale(85%);
+            box-shadow: none;
+        }
+
+/* Formularios */
+
+.formulario {
+    position: relative;
+    margin: 10%;
+    height: 300px;
+    width: 80%;
+}
+
+.TopDiv {
+    padding: 10px;
+    position: relative;
+    background: var(--color1);
+    height: 45%;
+    text-align: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+    .TopDiv label {
+        background: var(--color1);
+        color: var(--color4);
+        margin: 10px;
+    }
+
+    .TopDiv input {
+        background: var(--color4);
+        color: var(--color);
+        border: none;
+        outline: none;
+        margin: 10px;
+        height: 20px;
+        width: 150px;
+        padding-left: 5px;
+        font-size: 18px;
+    }
+
+.BottomDiv {
+    padding: 10px;
+    position: relative;
+    background: var(--color2);
+    height: 45%;
+    text-align: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+    .BottomDiv label {
+        background: var(--color2);
+        color: var(--color);
+        margin: 10px;
+    }
+
+    .BottomDiv input {
+        background: var(--color3);
+        color: var(--color);
+        border: none;
+        outline: none;
+        margin: 10px;
+        height: 20px;
+        width: 150px;
+        padding-left: 5px;
+        font-size: 18px;
+    }
+
+    .BottomDiv select {
+        background: var(--color3);
+        color: var(--color);
+        border: none;
+        outline: none;
+        margin: 10px;
+        height: 20px;
+        width: 150px;
+        padding-left: 5px;
+        font-size: 18px;
+    }
+
+    .BottomDiv option {
+        background: var(--color3);
+        color: var(--color);
+        border: none;
+        outline: none;
+        margin: 10px;
+        height: 20px;
+        width: 150px;
+        padding-left: 5px;
+        font-size: 18px;
+    }
+
+.buttonContainer {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    margin-top: 24px;
+}
+
+    .buttonContainer button {
+        background: var(--color2);
+        color: var(--color4);
+        width: 120px;
+        height: 60px;
+        transition: .35s;
+        border: none;
+        border-radius: 15px;
+    }
+
+        .buttonContainer button:hover {
+            width: 150px;
+            font-size: 18px;
+            box-shadow: 0 10px 35px var(--color0);
+        }
+
+        .buttonContainer button:active {
+            width: 120px;
+            font-size: 14px;
+            box-shadow: none;
+            transition: .18s;
+        }
+
+/* Listas */
+
+#cartel {
+    margin-left: 20px;
+}
+
+.btn button {
+    outline: none;
+    width: 140px;
+    height: 70px;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background: var(--color2);
+    color: var(--color4);
+    border: none;
+    border-radius: 10px;
+    transition: .3s;
+    font-size: 18px;
+}
+
+    .btn button:hover {
+        background: var(--color2);
+        color: var(--color4);
+        box-shadow: 0 10px 35px var(--color0);
+    }
+
+    .btn button:active {
+        transform: scale(85%);
+        box-shadow: none;
+    }
+
+.asdf button {
+    outline: none;
+    width: 80px;
+    height: 40px;
+    background: var(--color2);
+    color: var(--color4);
+    border: none;
+    border-radius: 10px;
+    transition: .3s;
+    font-size: 16px;
+}
+
+    .asdf button:hover {
+        transform: scale(110%);
+        box-shadow: 0 10px 35px var(--color0);
+    }
+
+    .asdf button:active {
+        transform: scale(85%);
+        box-shadow: none;
+    }
+
+th {
+    font-size: 20px;
+}
+
+td {
+    font-size: 20px;
+    text-align: center;
+    border-left: 1px solid;
+    width: 12%
+}
+
+.Buscar label {
+    margin-left: 10px;
+}
+
+.Buscar input {
+    background: var(--color2);
+    color: var(--color4);
+    border: none;
+    outline: none;
+    margin: 10px;
+    height: 25px;
+    width: 360px;
+    padding-left: 5px;
+    font-size: 18px;
+}

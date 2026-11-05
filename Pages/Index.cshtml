@@ -1,0 +1,34 @@
+﻿@page
+@model IndexModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="es">
+<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pagina del administrador</title>
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    </head>
+    <div class="topnav">
+        <a class="active" href="/Index">
+            <img src="/Recursos/Logo.png" alt="" id="Logo">
+        </a>
+    </div>
+    <div class="Registro">
+        <a href="/Entradas/Añadir"><button>Ingresar entradas</button></a>
+        <a href="/Salidas/Añadir"><button>Ingresar salidas</button></a>
+    </div>
+
+    <div class="Opciones">
+        <a href="/Alumnos/Lista"><button>Alumnos</button></a>
+        <a href="/Grupos/Lista"><button>Grupos</button></a>
+        <a href="/Horarios/Lista"><button>Horarios</button></a>
+        <a href="/Entradas/Lista"><button>Entradas</button></a>
+        <a href="/Salidas/Lista"><button>Salidas</button></a>
+    </div>
+    <script src="/js/site.js"></script>
+</body>
+</html>

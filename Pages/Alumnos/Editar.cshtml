@@ -1,0 +1,63 @@
+﻿@page "{ID:int}"
+@model Asistencias.Pages.Alumnos.EditarModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <div class="topnav">
+            <a class="active" href="/Index">
+                <img src="/Recursos/Logo.png" alt="" id="Logo">
+            </a>
+            <a href="/Alumnos/Lista">Alumnos</a>
+            <a href="/Grupos/Lista">Grupos</a>
+            <a href="/Horarios/Lista">Horarios</a>
+        </div>
+    </header>
+    <div class="cabezal">
+        <label>Formulario de ingreso</label>
+    </div>
+    <form method="post">
+        <div class="formulario">
+            <div class="TopDiv">
+                <label>Id</label>
+                <input type="number" asp-for="Editar.ID">
+                <label>Nombre</label>
+                <input type="text" asp-for="Editar.Nombre">
+                <label>Apellido paterno</label>
+                <input type="text" asp-for="Editar.ApellidoP">
+                <br />
+                <label>Apellido materno</label>
+                <input type="text" asp-for="Editar.ApellidoM">
+            </div>
+            <div class="BottomDiv">
+                @if (Model.Grupo != null && Model.Grupo.Any())
+                {
+                    <label>Selecciona un grupo</label>
+                    <select asp-for="Editar.GrupoId">
+                        @foreach (var Registro in Model.Grupo)
+                        {
+                            <option value="@Registro.ID">@Registro.GradoGrupo</option>
+                        }
+                    </select>
+                }
+            </div>
+        </div>
+        <div class="buttonContainer">
+            <button type="submit" asp-page-handler="Actualizar">Actualizar</button>
+            <button type="submit" asp-page-handler="Eliminar">Eliminar</button>
+            <button type="submit" asp-page-handler="Buscar">Buscar</button>
+        </div>
+    </form>
+</body>
+<script src="~/js/site.js" asp-append-version="true"></script>
+</html>

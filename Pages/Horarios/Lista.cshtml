@@ -1,0 +1,64 @@
+﻿@page
+@model Asistencias.Pages.Horarios.ListaModel
+@{
+    Layout = null;
+}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="/Index">
+            <img src="/Recursos/Logo.png" alt="" id="Logo">
+        </a>
+        <a href="/Alumnos/Lista">Alumnos</a>
+        <a href="/Grupos/Lista">Grupos</a>
+        <a href="/Horarios/Lista">Horarios</a>
+    </div>
+    <h1 id="cartel">Lista de Horarios</h1>
+    <div class="btn">
+        <a href="/Horarios/Añadir"><button>Añadir registro</button></a>
+    </div>
+    <div style="height:50px"></div>
+    @if (Model.Horario != null && Model.Horario.Any())
+    {
+        <table class="Tb">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Dia</th>
+                    <th>Entrada</th>
+                    <th>Salida</th>
+                    <th> </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var Registro in Model.Horario)
+                {
+                    <tr>
+                        <td>@Registro.ID</td>
+                        <td>@Registro.Dia</td>
+                        <td>@Registro.Entrada</td>
+                        <td>@Registro.Salida</td>
+                        <td>
+                            <div class="asdf">
+                                <a href="/Horarios/Editar/@Registro.ID"><button>Editar</button></a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No hay registros</p>
+    }
+</body>
+<script src="~/js/site.js" asp-append-version="true"></script>
+</html>

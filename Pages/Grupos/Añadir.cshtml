@@ -1,0 +1,39 @@
+﻿@page
+@model Asistencias.Pages.Grupos.AñadirModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="/Index">
+            <img src="/Recursos/Logo.png" alt="" id="Logo">
+        </a>
+        <a href="/Alumnos/Lista">Alumnos</a>
+        <a href="/Grupos/Lista">Grupos</a>
+        <a href="/Horarios/Lista">Horarios</a>
+    </div>
+    <div class="cabezal">
+        <label>Grupos</label>
+    </div>
+    <form method="post">
+        <div class="formulario">
+            <div class="TopDiv">
+                <label>Grado y grupo</label>
+                <input type="text" asp-for="Añadir.GradoGrupo">
+            </div>
+        <div class="buttonContainer">
+            <button type="submit">Guardar</button>
+        </div>
+    </form>
+</body>
+<script src="~/js/site.js" asp-append-version="true"></script>
+</html>

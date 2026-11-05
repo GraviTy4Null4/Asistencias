@@ -1,0 +1,37 @@
+﻿@page
+@model Asistencias.Pages.Salidas.AñadirModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="/Index">
+            <img src="/Recursos/Logo.png" alt="" id="Logo">
+        </a>
+        <a href="/Alumnos/Lista">Alumnos</a>
+        <a href="/Grupos/Lista">Grupos</a>
+        <a href="/Horarios/Lista">Horarios</a>
+    </div>
+    <div class="Registro">
+        <form method="post">
+            <label>Insertar ID de alumno</label>
+            <input type="number" asp-for="Añadir.AlumnoId" />
+            <br />
+            <input id="qwerty" type="text" asp-for="Añadir.Hora" />
+            <br />
+            <button type="submit" asp-page-handler="Enviar">Enviar</button>
+        </form>
+        <a href="/Registros/Salida"><button>asdf</button></a>
+    </div>
+</body>
+<script src="~/js/site.js" asp-append-version="true"></script>
+</html>
